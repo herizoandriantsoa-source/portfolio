@@ -1,0 +1,502 @@
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<title>Herizo Aimé Andriantsoa</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&display=swap">
+<style>
+/* Layout: colonne unique, grille éditoriale. Rangées de projets en registre (année en mono à gauche). Accent jacaranda, la couleur d'Antananarivo en octobre. */
+:root{
+  --bg:#F6F5FA;
+  --surface:#FFFFFF;
+  --fg:#17152A;
+  --muted:#5E5B73;
+  --line:#DAD7E6;
+  --accent:#5B3FD0;
+  --accent-ink:#FFFFFF;
+  --accent-soft:#E9E4FA;
+  --font-display:'Bricolage Grotesque','Segoe UI',system-ui,sans-serif;
+  --font-body:'IBM Plex Sans','Segoe UI',system-ui,sans-serif;
+  --font-mono:'IBM Plex Mono',ui-monospace,Consolas,monospace;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#100F1C;--surface:#181629;--fg:#ECEAF7;--muted:#A09DB8;--line:#2B2842;
+    --accent:#A992FF;--accent-ink:#14102B;--accent-soft:#251F45;color-scheme:dark
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#100F1C;--surface:#181629;--fg:#ECEAF7;--muted:#A09DB8;--line:#2B2842;
+  --accent:#A992FF;--accent-ink:#14102B;--accent-soft:#251F45;color-scheme:dark
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  background:var(--bg);color:var(--fg);font-family:var(--font-body);font-size:16px;line-height:1.6;
+  padding-block:0;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));
+}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:10;background:var(--bg)}
+.wrap{max-width:1040px;margin:0 auto}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:3px}
+
+/* nav */
+.nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:9;background:var(--bg);border-bottom:1px solid var(--line)}
+.nav .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;padding-block:14px;flex-wrap:wrap}
+.mark{font-family:var(--font-display);font-weight:800;font-size:18px;letter-spacing:-.02em;text-decoration:none}
+.nav ul{display:flex;gap:20px;list-style:none;margin:0;padding:0;flex-wrap:wrap}
+.nav ul a{font-family:var(--font-mono);font-size:12px;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);text-decoration:none}
+.nav ul a:hover{color:var(--accent)}
+
+/* hero */
+.avatar{width:200px;height:200px;border-radius:50%;background:var(--teal);display:flex;align-items:center;justify-content:center;font-size:26px;font-weight:500;color:#fff;flex-shrink:0;letter-spacing:-1px;overflow:hidden;border:3px solid rgba(255,255,255,0.2)}
+.avatar img{width:100%;height:100%;object-fit:cover;border-radius:50%}
+.hero{padding-block:64px 56px;display:grid;grid-template-columns:minmax(0,1.5fr) minmax(0,1fr);gap:48px;align-items:end}
+.eyebrow{font-family:var(--font-mono);font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--accent);margin:0 0 20px}
+h1{font-family:var(--font-display);font-weight:800;font-size:clamp(2.6rem,7vw,5.2rem);line-height:.98;letter-spacing:-.035em;margin:0 0 24px;text-wrap:balance}
+.lede{font-size:1.15rem;max-width:34em;color:var(--muted);margin:0 0 28px}
+.lede strong{color:var(--fg);font-weight:600}
+.cta{display:flex;gap:12px;flex-wrap:wrap}
+.btn{display:inline-flex;align-items:center;padding:11px 20px;border-radius:6px;font-weight:600;font-size:15px;text-decoration:none;border:1px solid var(--accent);background:var(--accent);color:var(--accent-ink)}
+.btn.ghost{background:transparent;color:var(--fg);border-color:var(--line)}
+.btn:hover{filter:brightness(1.08)}
+.btn.ghost:hover{border-color:var(--accent);color:var(--accent);filter:none}
+.fiche{border:1px solid var(--line);background:var(--surface);border-radius:8px;padding:6px 18px;font-family:var(--font-mono);font-size:12.5px}
+.fiche div{display:flex;justify-content:space-between;gap:16px;padding:11px 0;border-bottom:1px solid var(--line)}
+.fiche div:last-child{border-bottom:none}
+.fiche dt{color:var(--muted);margin:0}
+.fiche dd{margin:0;text-align:right}
+.fiche{margin:0}
+
+/* sections */
+section{padding-block:56px;border-top:1px solid var(--line)}
+.sec-head{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,2fr);gap:32px;margin-bottom:32px}
+h2{font-family:var(--font-display);font-weight:700;font-size:clamp(1.6rem,3.2vw,2.2rem);letter-spacing:-.025em;line-height:1.1;margin:0;text-wrap:balance}
+.sec-head p{margin:0;color:var(--muted);max-width:40em}
+
+/* projets */
+.ledger{list-style:none;margin:0;padding:0;border-top:1px solid var(--fg)}
+.row{display:grid;grid-template-columns:120px minmax(0,1.2fr) minmax(0,1.4fr);gap:24px;padding:22px 0;border-bottom:1px solid var(--line)}
+.row .yr{font-family:var(--font-mono);font-size:13px;color:var(--accent);padding-top:4px}
+.row h3{font-family:var(--font-display);font-weight:700;font-size:1.3rem;letter-spacing:-.015em;line-height:1.2;margin:0 0 6px}
+.row .client{font-size:14px;color:var(--muted);margin:0}
+.row .desc{margin:0 0 10px}
+.chips{display:flex;flex-wrap:wrap;gap:6px;list-style:none;margin:0;padding:0}
+.chips li{font-family:var(--font-mono);font-size:11.5px;padding:3px 9px;border-radius:4px;background:var(--accent-soft);color:var(--accent)}
+
+/* parcours */
+.path{list-style:none;margin:0;padding:0}
+.path li{display:grid;grid-template-columns:170px minmax(0,1fr);gap:24px;padding:18px 0;border-bottom:1px solid var(--line)}
+.path li:first-child{padding-top:0}
+.path time{font-family:var(--font-mono);font-size:13px;color:var(--muted);padding-top:3px}
+.path h3{font-size:1.02rem;font-weight:600;margin:0 0 2px}
+.path .org{margin:0 0 6px;color:var(--accent);font-size:14px}
+.path p.d{margin:0;color:var(--muted);font-size:15px;max-width:44em}
+
+/* compétences */
+.skills{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:20px}
+.skill{border:1px solid var(--line);background:var(--surface);border-radius:8px;padding:20px}
+.skill h3{font-family:var(--font-mono);font-size:12px;text-transform:uppercase;letter-spacing:.1em;color:var(--accent);margin:0 0 14px;font-weight:500}
+.skill ul{list-style:none;margin:0;padding:0;display:grid;gap:7px;font-size:15px}
+.skill li{padding-bottom:7px;border-bottom:1px solid var(--line)}
+.skill li:last-child{border-bottom:none;padding-bottom:0}
+
+/* formation */
+.two{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:32px}
+.two h3{font-family:var(--font-mono);font-size:12px;text-transform:uppercase;letter-spacing:.1em;color:var(--muted);font-weight:500;margin:0 0 14px}
+.deg{list-style:none;margin:0;padding:0}
+.deg li{display:grid;grid-template-columns:56px minmax(0,1fr);gap:12px;padding:12px 0;border-bottom:1px solid var(--line)}
+.deg b{font-family:var(--font-mono);font-weight:500;font-size:13px;color:var(--accent)}
+.deg span{display:block;color:var(--muted);font-size:14px}
+.plat{display:flex;flex-wrap:wrap;gap:8px;list-style:none;margin:0 0 16px;padding:0}
+.plat li{border:1px solid var(--line);background:var(--surface);border-radius:999px;padding:5px 13px;font-size:13.5px}
+.note{font-size:14.5px;color:var(--muted);margin:0;max-width:40em}
+
+/* contact */
+.contact{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:32px;align-items:start}
+.big{font-family:var(--font-display);font-weight:800;font-size:clamp(1.8rem,4.6vw,3.2rem);line-height:1.02;letter-spacing:-.03em;margin:0;text-wrap:balance}
+.lines{margin:0;padding:0;list-style:none;border-top:1px solid var(--fg)}
+.lines li{display:grid;grid-template-columns:90px minmax(0,1fr) auto;gap:12px;align-items:center;padding:14px 0;border-bottom:1px solid var(--line)}
+.lines .k{font-family:var(--font-mono);font-size:12px;text-transform:uppercase;letter-spacing:.08em;color:var(--muted)}
+.lines .v{overflow-wrap:anywhere;user-select:text}
+.copy{font-family:var(--font-mono);font-size:11.5px;padding:4px 10px;border-radius:4px;border:1px solid var(--line);background:transparent;color:var(--fg);cursor:pointer}
+.copy:hover{border-color:var(--accent);color:var(--accent)}
+footer{border-top:1px solid var(--line);padding-block:28px 40px;font-family:var(--font-mono);font-size:12px;color:var(--muted);display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+/* === ICÔNES TECHNOS === */
+.chips li{
+  display:inline-flex;
+  align-items:center;
+  gap:5px;
+}
+.chips li svg{
+  width:13px;
+  height:13px;
+  flex-shrink:0;
+  fill:currentColor;
+  vertical-align:middle;
+}
+
+/* === ICÔNES CERTIFICATIONS === */
+.plat li{
+  display:inline-flex;
+  align-items:center;
+  gap:6px;
+}
+.plat li .cert-icon{
+  width:15px;
+  height:15px;
+  flex-shrink:0;
+  fill:currentColor;
+  color:var(--accent);
+}
+
+/* Pastille colorée par techno (optionnel, plus visuel) */
+.chips li[data-tech="php"]{color:#777BB4}
+.chips li[data-tech="symfony"]{color:#000}
+.chips li[data-tech="mysql"]{color:#4479A1}
+.chips li[data-tech="aws"]{color:#FF9900}
+.chips li[data-tech="react"]{color:#61DAFB}
+.chips li[data-tech="python"]{color:#3776AB}
+.chips li[data-tech="java"]{color:#007396}
+.chips li[data-tech="excel"]{color:#217346}
+.chips li[data-tech="word"]{color:#2B579A}
+.chips li[data-tech="powerbi"]{color:#F2C811}
+.chips li[data-tech="linux"]{color:#FCC624}
+.chips li[data-tech="ia"]{color:#8A2BE2}
+.chips li[data-tech="api"]{color:#6BA539}
+.chips li[data-tech="ocr"]{color:#5B3FD0}
+.chips li[data-tech="realtime"]{color:#E63946}
+
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]) .chips li[data-tech="symfony"]{color:#ECEAF7}
+}
+:root[data-theme="dark"] .chips li[data-tech="symfony"]{color:#ECEAF7}
+@media (max-width:820px){
+  .hero{grid-template-columns:1fr;gap:36px;padding-block:44px 40px}
+  .sec-head{grid-template-columns:1fr;gap:12px}
+  .row{grid-template-columns:1fr;gap:8px}
+  .path li{grid-template-columns:1fr;gap:4px}
+  .contact{grid-template-columns:1fr}
+  .avatar{margin:0 auto}.hero-pills{justify-content:center}.hero-name{font-size:18px}
+}
+@media (max-width:480px){
+  .lines li{grid-template-columns:1fr auto}
+  .lines .k{grid-column:1/-1}
+  .nav ul{gap:14px}
+}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
+
+<header class="nav">
+  <div class="wrap">
+    <a class="mark" href="#haut">H. Andriantsoa</a>
+    <nav aria-label="Sections">
+      <ul>
+        <li><a href="#projets">Projets</a></li>
+        <li><a href="#parcours">Parcours</a></li>
+        <li><a href="#competences">Compétences</a></li>
+        <li><a href="#formation">Formation</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap" id="haut">
+  <div class="hero">
+    <div>
+      <p class="eyebrow">Expert IT · Consultant · Formateur</p>
+		<div class="avatar">
+		  <img src="photo.png" alt="Herizo Andriantsoa" width="200" height="200" loading="eager" decoding="async"
+			   onerror="this.replaceWith(Object.assign(document.createElement('span'),{textContent:'HA'}))">
+		</div>
+      <h1>Herizo Aimé Andriantsoa</h1>
+      <p class="lede">Je conçois des <strong>applications web de gestion</strong> pour les écoles, les hôpitaux et le secteur public, et je forme les équipes qui les utilisent. Fondateur de <strong>TECHXPERT</strong>, à Antananarivo.</p>
+      <div class="cta">
+        <a class="btn" href="#projets">Voir les projets</a>
+        <a class="btn ghost" href="#contact">Me contacter</a>
+      </div>
+    </div>
+    <dl class="fiche">
+      <div><dt>Base</dt><dd>Antananarivo, MG</dd></div>
+      <div><dt>Coordonnées</dt><dd>18°55′ S · 47°31′ E</dd></div>
+      <div><dt>Structure</dt><dd>TECHXPERT, depuis 2023</dd></div>
+      <div><dt>Pratique</dt><dd>depuis 2013</dd></div>
+      <div><dt>Langues</dt><dd>MG · FR · EN</dd></div>
+    </dl>
+  </div>
+
+  <section id="projets">
+    <div class="sec-head">
+      <h2>Projets réalisés</h2>
+      <p>Des plateformes pédagogiques et des systèmes d'information livrés à des écoles, à un service de santé, à des compagnies d'assurance et à des collectivités.</p>
+    </div>
+    <ol class="ledger">
+  <li class="row">
+    <span class="yr">sept. 2026</span>
+    <div>
+      <h3>ExcelLab</h3>
+      <p class="client">IFR Ankadifotsy</p>
+    </div>
+    <div>
+      <p class="desc">Plateforme d'exercices Excel chronométrés. L'élève s'identifie depuis la base Gestion Étudiant, résout l'exercice contre la montre et reçoit un verdict cellule par cellule. L'enseignant importe un fichier .xlsx (exercice et corrigé), suit les élèves en temps réel et exporte les résultats.</p>
+      <ul class="chips">
+        <li data-tech="php"><svg viewBox="0 0 24 24"><path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.6 0 12 0zM7.6 13.5c-.3.6-1 1-1.9 1h-1l-.6 3H2.7l1.6-7.6h3.1c1.6 0 2.5.9 2.2 2.3-.1.5-.3 1-.6 1.3zm6.8.3h-1.7l-.5 2.6h-1.4l1.6-7.6h1.4l-.4 1.9h1.7l.4-1.9h1.4l-1.6 7.6h-1.4l.5-2.6zm5.5-2.3c-.2.9-.6 1.5-1.3 1.8-.3.2-.7.2-1.2.2h-.7l-.5 2.4h-1.4l1.6-7.6h2.2c1.6 0 2.4.8 2.1 2.3-.2.4-.4.7-.8.9zm-15-1.3h-1l-.4 1.9h.9c.5 0 .9-.1 1.1-.3.2-.2.3-.5.4-.8.1-.4 0-.6-.1-.7-.1-.1-.4-.1-.9-.1zm7.5 1.3h-.8l-.4 1.9h.9c.5 0 .9-.1 1.1-.3.2-.2.3-.5.4-.8.1-.4 0-.6-.2-.7-.1-.1-.4-.1-1-.1zm5.5 0h-.8l-.4 1.9h.9c.5 0 .9-.1 1.1-.3.2-.2.3-.5.4-.8.1-.4 0-.6-.1-.7-.2-.1-.5-.1-1.1-.1z"/></svg>PHP</li>
+        <li data-tech="mysql"><svg viewBox="0 0 24 24"><path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10 10-4.5 10-10S17.5 2 12 2zm0 3c1.4 0 2.5.9 2.5 2 0 .8-.4 1.4-1.1 1.8.7.3 1.2.9 1.2 1.7 0 1.1-1 2-2.4 2-1.5 0-2.6-.9-2.6-2.2h1.6c0 .5.4.8.9.8s.9-.3.9-.8-.4-.8-1-.8h-.5v-1.3h.5c.5 0 .9-.3.9-.7 0-.4-.4-.7-.9-.7s-.8.3-.9.7H9.5c0-1.2 1.1-2 2.5-2zm-3 5.5h1.6v5H9v-5zm3 0h1.5v.7c.3-.5.9-.9 1.7-.9 1.3 0 2.1.9 2.1 2.3V15h-1.6v-2.7c0-.7-.4-1.1-1-1.1s-1.1.4-1.1 1.1V15h-1.6v-5zm6 0H20v.7c.3-.5.8-.8 1.5-.8 1.2 0 2 .8 2 2.2V15h-1.6v-2.7c0-.6-.3-1-.8-1s-.9.4-.9 1V15h-1.6v-5z"/></svg>MySQL</li>
+        <li data-tech="excel"><svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zm-1 7V3.5L18.5 9H13zM8.5 12l2 3-2 3h1.7l1.2-2 1.2 2h1.7l-2-3 2-3h-1.7l-1.2 2-1.2-2H8.5z"/></svg>Excel .xlsx</li>
+        <li data-tech="realtime"><svg viewBox="0 0 24 24"><path d="M13 2L3 14h7l-1 8 10-12h-7l1-8z"/></svg>Temps réel</li>
+      </ul>
+    </div>
+  </li>
+
+  <li class="row">
+    <span class="yr">sept. 2026</span>
+    <div>
+      <h3>BureautiqueLab</h3>
+      <p class="client">IFR Ankadifotsy</p>
+    </div>
+    <div>
+      <p class="desc">Plateforme de dépôt et de correction automatique de travaux Word (.docx) et Excel (.xlsx). L'élève reçoit une note sur 20 avec le détail critère par critère. L'enseignant suit les dépôts en temps réel, consulte le classement et génère des questions par IA.</p>
+      <ul class="chips">
+        <li data-tech="word"><svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zm-1 7V3.5L18.5 9H13zM8 13h1.5l.7 3 .8-3h1.3l.8 3 .7-3H15l-1.4 5h-1.4l-.8-3.2-.8 3.2H9.2L8 13z"/></svg>Word</li>
+        <li data-tech="excel"><svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zm-1 7V3.5L18.5 9H13zM8.5 12l2 3-2 3h1.7l1.2-2 1.2 2h1.7l-2-3 2-3h-1.7l-1.2 2-1.2-2H8.5z"/></svg>Excel</li>
+        <li data-tech="api"><svg viewBox="0 0 24 24"><path d="M9.5 3L7 5.5 9.5 8 12 5.5 9.5 3zm5 0L12 5.5 14.5 8 17 5.5 14.5 3zM5.5 9.5L3 12l2.5 2.5L8 12 5.5 9.5zm13 0L16 12l2.5 2.5L21 12l-2.5-2.5zM9.5 16L7 18.5 9.5 21 12 18.5 9.5 16zm5 0L12 18.5 14.5 21 17 18.5 14.5 16z"/></svg>Correction auto</li>
+        <li data-tech="ia"><svg viewBox="0 0 24 24"><path d="M12 2a2 2 0 0 1 2 2c0 .7-.4 1.4-.9 1.7L13 7.5h1.5a2 2 0 0 1 2 2v1.5h1.5a2 2 0 0 1 2 2 2 2 0 0 1-2 2H17v1.5a2 2 0 0 1-2 2h-1.5v1.5a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-1.5H8a2 2 0 0 1-2-2V15H4.5a2 2 0 0 1-2-2 2 2 0 0 1 2-2H6V9.5a2 2 0 0 1 2-2h1.5L9.9 5.7A2 2 0 0 1 12 2zm-1 8v4h2v-4h-2z"/></svg>IA générative</li>
+      </ul>
+    </div>
+  </li>
+
+  <li class="row">
+    <span class="yr">sept. 2026</span>
+    <div>
+      <h3>SmartQuiz</h3>
+      <p class="client">IFR Ankadifotsy</p>
+    </div>
+    <div>
+      <p class="desc">Plateforme de quiz chronométrés. L'IA génère les questions à partir de leçons PDF ou Word, avec OCR des PDF scannés et formules en LaTeX. Protection anti-fraude pendant le quiz, synchronisation avec Gestion Étudiant, suivi en temps réel et statistiques par classe.</p>
+      <ul class="chips">
+        <li data-tech="symfony"><svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm0 18a8 8 0 1 1 0-16 8 8 0 0 1 0 16zM9 8l-3 4 3 4h2l-3-4 3-4H9zm6 0h-2l3 4-3 4h2l3-4-3-4z"/></svg>Symfony 7</li>
+        <li data-tech="symfony"><svg viewBox="0 0 24 24"><path d="M4 5h16v2H4zm0 6h16v2H4zm0 6h16v2H4z"/></svg>Doctrine</li>
+        <li data-tech="ia"><svg viewBox="0 0 24 24"><path d="M12 2a2 2 0 0 1 2 2c0 .7-.4 1.4-.9 1.7L13 7.5h1.5a2 2 0 0 1 2 2v1.5h1.5a2 2 0 0 1 2 2 2 2 0 0 1-2 2H17v1.5a2 2 0 0 1-2 2h-1.5v1.5a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-1.5H8a2 2 0 0 1-2-2V15H4.5a2 2 0 0 1-2-2 2 2 0 0 1 2-2H6V9.5a2 2 0 0 1 2-2h1.5L9.9 5.7A2 2 0 0 1 12 2zm-1 8v4h2v-4h-2z"/></svg>IA générative</li>
+        <li data-tech="ocr"><svg viewBox="0 0 24 24"><path d="M3 5v4h2V5h4V3H5a2 2 0 0 0-2 2zm18 0a2 2 0 0 0-2-2h-4v2h4v4h2V5zM3 19a2 2 0 0 0 2 2h4v-2H5v-4H3v4zm18-4h-2v4h-4v2h4a2 2 0 0 0 2-2v-4zM7 9h10v2H7zm0 4h10v2H7z"/></svg>OCR</li>
+      </ul>
+    </div>
+  </li>
+
+  <li class="row">
+    <span class="yr">2021 → 2026</span>
+    <div>
+      <h3>Gestion Étudiant</h3>
+      <p class="client">Lycée SUNBEAM · IFR Ankadifotsy · Collège IFARIHY Famonjena · École FJKM VINET Ambohimalaza</p>
+    </div>
+    <div>
+      <p class="desc">Conception et déploiement d'une base de données et d'une application de gestion des étudiants, adaptées à chacun des quatre établissements.</p>
+      <ul class="chips">
+        <li data-tech="symfony"><svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm0 18a8 8 0 1 1 0-16 8 8 0 0 1 0 16zM9 8l-3 4 3 4h2l-3-4 3-4H9zm6 0h-2l3 4-3 4h2l3-4-3-4z"/></svg>Symfony 7</li>
+        <li data-tech="php"><svg viewBox="0 0 24 24"><path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.6 0 12 0zM7.6 13.5c-.3.6-1 1-1.9 1h-1l-.6 3H2.7l1.6-7.6h3.1c1.6 0 2.5.9 2.2 2.3-.1.5-.3 1-.6 1.3zm6.8.3h-1.7l-.5 2.6h-1.4l1.6-7.6h1.4l-.4 1.9h1.7l.4-1.9h1.4l-1.6 7.6h-1.4l.5-2.6zm5.5-2.3c-.2.9-.6 1.5-1.3 1.8-.3.2-.7.2-1.2.2h-.7l-.5 2.4h-1.4l1.6-7.6h2.2c1.6 0 2.4.8 2.1 2.3-.2.4-.4.7-.8.9zm-15-1.3h-1l-.4 1.9h.9c.5 0 .9-.1 1.1-.3.2-.2.3-.5.4-.8.1-.4 0-.6-.1-.7-.1-.1-.4-.1-.9-.1zm7.5 1.3h-.8l-.4 1.9h.9c.5 0 .9-.1 1.1-.3.2-.2.3-.5.4-.8.1-.4 0-.6-.2-.7-.1-.1-.4-.1-1-.1zm5.5 0h-.8l-.4 1.9h.9c.5 0 .9-.1 1.1-.3.2-.2.3-.5.4-.8.1-.4 0-.6-.1-.7-.2-.1-.5-.1-1.1-.1z"/></svg>PHP</li>
+        <li data-tech="mysql"><svg viewBox="0 0 24 24"><path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10 10-4.5 10-10S17.5 2 12 2zm0 3c1.4 0 2.5.9 2.5 2 0 .8-.4 1.4-1.1 1.8.7.3 1.2.9 1.2 1.7 0 1.1-1 2-2.4 2-1.5 0-2.6-.9-2.6-2.2h1.6c0 .5.4.8.9.8s.9-.3.9-.8-.4-.8-1-.8h-.5v-1.3h.5c.5 0 .9-.3.9-.7 0-.4-.4-.7-.9-.7s-.8.3-.9.7H9.5c0-1.2 1.1-2 2.5-2zm-3 5.5h1.6v5H9v-5zm3 0h1.5v.7c.3-.5.9-.9 1.7-.9 1.3 0 2.1.9 2.1 2.3V15h-1.6v-2.7c0-.7-.4-1.1-1-1.1s-1.1.4-1.1 1.1V15h-1.6v-5zm6 0H20v.7c.3-.5.8-.8 1.5-.8 1.2 0 2 .8 2 2.2V15h-1.6v-2.7c0-.6-.3-1-.8-1s-.9.4-.9 1V15h-1.6v-5z"/></svg>MySQL</li>
+      </ul>
+    </div>
+  </li>
+
+  <li class="row">
+    <span class="yr">2023 → auj.</span>
+    <div>
+      <h3>Digitalisation hospitalière HJRA</h3>
+      <p class="client">Service Santé et Environnement · via TECHXPERT</p>
+    </div>
+    <div>
+      <p class="desc">Système d'enregistrement des données liées aux expositions chimiques, conçu et déployé en tant que consultant national Santé &amp; Environnement.</p>
+      <ul class="chips">
+        <li data-tech="realtime"><svg viewBox="0 0 24 24"><path d="M12 21.3l-1.4-1.3C5.4 15.4 2 12.3 2 8.5 2 5.4 4.4 3 7.5 3c1.7 0 3.4.8 4.5 2.1C13.1 3.8 14.8 3 16.5 3 19.6 3 22 5.4 22 8.5c0 3.8-3.4 6.9-8.6 11.5L12 21.3z"/></svg>Santé</li>
+        <li data-tech="mysql"><svg viewBox="0 0 24 24"><path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10 10-4.5 10-10S17.5 2 12 2zm0 3c1.4 0 2.5.9 2.5 2 0 .8-.4 1.4-1.1 1.8.7.3 1.2.9 1.2 1.7 0 1.1-1 2-2.4 2-1.5 0-2.6-.9-2.6-2.2h1.6c0 .5.4.8.9.8s.9-.3.9-.8-.4-.8-1-.8h-.5v-1.3h.5c.5 0 .9-.3.9-.7 0-.4-.4-.7-.9-.7s-.8.3-.9.7H9.5c0-1.2 1.1-2 2.5-2zm-3 5.5h1.6v5H9v-5zm3 0h1.5v.7c.3-.5.9-.9 1.7-.9 1.3 0 2.1.9 2.1 2.3V15h-1.6v-2.7c0-.7-.4-1.1-1-1.1s-1.1.4-1.1 1.1V15h-1.6v-5zm6 0H20v.7c.3-.5.8-.8 1.5-.8 1.2 0 2 .8 2 2.2V15h-1.6v-2.7c0-.6-.3-1-.8-1s-.9.4-.9 1V15h-1.6v-5z"/></svg>Données</li>
+        <li data-tech="ia"><svg viewBox="0 0 24 24"><path d="M12 2a2 2 0 0 1 2 2c0 .7-.4 1.4-.9 1.7L13 7.5h1.5a2 2 0 0 1 2 2v1.5h1.5a2 2 0 0 1 2 2 2 2 0 0 1-2 2H17v1.5a2 2 0 0 1-2 2h-1.5v1.5a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-1.5H8a2 2 0 0 1-2-2V15H4.5a2 2 0 0 1-2-2 2 2 0 0 1 2-2H6V9.5a2 2 0 0 1 2-2h1.5L9.9 5.7A2 2 0 0 1 12 2zm-1 8v4h2v-4h-2z"/></svg>Consultance</li>
+      </ul>
+    </div>
+  </li>
+
+  <li class="row">
+    <span class="yr">2022</span>
+    <div>
+      <h3>Gestion de traite</h3>
+      <p class="client">SCREM · Finances et assurances</p>
+    </div>
+    <div>
+      <p class="desc">Application de suivi des traites pour une compagnie d'assurance.</p>
+      <ul class="chips">
+        <li data-tech="api"><svg viewBox="0 0 24 24"><path d="M9.5 3L7 5.5 9.5 8 12 5.5 9.5 3zm5 0L12 5.5 14.5 8 17 5.5 14.5 3zM5.5 9.5L3 12l2.5 2.5L8 12 5.5 9.5zm13 0L16 12l2.5 2.5L21 12l-2.5-2.5zM9.5 16L7 18.5 9.5 21 12 18.5 9.5 16zm5 0L12 18.5 14.5 21 17 18.5 14.5 16z"/></svg>Finance</li>
+        <li data-tech="symfony"><svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm0 18a8 8 0 1 1 0-16 8 8 0 0 1 0 16zM9 8l-3 4 3 4h2l-3-4 3-4H9zm6 0h-2l3 4-3 4h2l3-4-3-4z"/></svg>Application métier</li>
+      </ul>
+    </div>
+  </li>
+
+  <li class="row">
+    <span class="yr">2021</span>
+    <div>
+      <h3>Gestion de cotisation</h3>
+      <p class="client">ARO · Finances et assurances</p>
+    </div>
+    <div>
+      <p class="desc">Système de gestion des cotisations, de l'enregistrement au suivi.</p>
+      <ul class="chips">
+        <li data-tech="api"><svg viewBox="0 0 24 24"><path d="M9.5 3L7 5.5 9.5 8 12 5.5 9.5 3zm5 0L12 5.5 14.5 8 17 5.5 14.5 3zM5.5 9.5L3 12l2.5 2.5L8 12 5.5 9.5zm13 0L16 12l2.5 2.5L21 12l-2.5-2.5zM9.5 16L7 18.5 9.5 21 12 18.5 9.5 16zm5 0L12 18.5 14.5 21 17 18.5 14.5 16z"/></svg>Finance</li>
+        <li data-tech="symfony"><svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm0 18a8 8 0 1 1 0-16 8 8 0 0 1 0 16zM9 8l-3 4 3 4h2l-3-4 3-4H9zm6 0h-2l3 4-3 4h2l3-4-3-4z"/></svg>Application métier</li>
+      </ul>
+    </div>
+  </li>
+
+  <li class="row">
+    <span class="yr">2013 → 2022</span>
+    <div>
+      <h3>Monographies régionales de Fianarantsoa</h3>
+      <p class="client">Secteur public</p>
+    </div>
+    <div>
+      <p class="desc">Digitalisation administrative des monographies de la région.</p>
+      <ul class="chips">
+        <li data-tech="realtime"><svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5zm0 7.5L4 5.5 12 3l8 2.5-8 4zM2 17l10 5 10-5-2-1-8 4-8-4-2 1zm0-5l10 5 10-5-2-1-8 4-8-4-2 1z"/></svg>Administration</li>
+        <li data-tech="mysql"><svg viewBox="0 0 24 24"><path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10 10-4.5 10-10S17.5 2 12 2zm0 3c1.4 0 2.5.9 2.5 2 0 .8-.4 1.4-1.1 1.8.7.3 1.2.9 1.2 1.7 0 1.1-1 2-2.4 2-1.5 0-2.6-.9-2.6-2.2h1.6c0 .5.4.8.9.8s.9-.3.9-.8-.4-.8-1-.8h-.5v-1.3h.5c.5 0 .9-.3.9-.7 0-.4-.4-.7-.9-.7s-.8.3-.9.7H9.5c0-1.2 1.1-2 2.5-2zm-3 5.5h1.6v5H9v-5zm3 0h1.5v.7c.3-.5.9-.9 1.7-.9 1.3 0 2.1.9 2.1 2.3V15h-1.6v-2.7c0-.7-.4-1.1-1-1.1s-1.1.4-1.1 1.1V15h-1.6v-5zm6 0H20v.7c.3-.5.8-.8 1.5-.8 1.2 0 2 .8 2 2.2V15h-1.6v-2.7c0-.6-.3-1-.8-1s-.9.4-.9 1V15h-1.6v-5z"/></svg>Base de données</li>
+      </ul>
+    </div>
+  </li>
+
+  <li class="row">
+    <span class="yr">2013 → 2022</span>
+    <div>
+      <h3>Gestion des taxes communales</h3>
+      <p class="client">Secteur public</p>
+    </div>
+    <div>
+      <p class="desc">Outil de gestion des taxes pour les communes.</p>
+      <ul class="chips">
+        <li data-tech="realtime"><svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5zm0 7.5L4 5.5 12 3l8 2.5-8 4zM2 17l10 5 10-5-2-1-8 4-8-4-2 1zm0-5l10 5 10-5-2-1-8 4-8-4-2 1z"/></svg>Administration</li>
+        <li data-tech="symfony"><svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm0 18a8 8 0 1 1 0-16 8 8 0 0 1 0 16zM9 8l-3 4 3 4h2l-3-4 3-4H9zm6 0h-2l3 4-3 4h2l3-4-3-4z"/></svg>Application métier</li>
+      </ul>
+    </div>
+  </li>
+</ol>
+  </section>
+
+  <section id="parcours">
+    <div class="sec-head">
+      <h2>Parcours</h2>
+      <p>Direction d'entreprise, responsabilité de parcs informatiques et enseignement.</p>
+    </div>
+    <ul class="path">
+      <li>
+        <time>Depuis juin 2026</time>
+        <div><h3>Développeur de solutions éducatives</h3><p class="org">Collège IFARIHY Famonjena · École FJKM VINET Ambohimalaza</p><p class="d">Création et intégration d'une base de données dédiée à la gestion des étudiants.</p></div>
+      </li>
+      <li>
+        <time>Depuis 2025</time>
+        <div><h3>Responsable Parc Informatique &amp; Pédagogique</h3><p class="org">IFR Ankadifotsy</p><p class="d">Gestion de l'infrastructure IT, coordination pédagogique et déploiement d'une base de données de gestion des étudiants. En septembre 2026, conception de trois plateformes pédagogiques : ExcelLab, BureautiqueLab et SmartQuiz.</p></div>
+      </li>
+      <li>
+        <time>Depuis déc. 2023</time>
+        <div><h3>Consultant national, Santé &amp; Environnement</h3><p class="org">Service Santé et Environnement, via TECHXPERT</p><p class="d">Digitalisation hospitalière HJRA.</p></div>
+      </li>
+      <li>
+        <time>Depuis mai 2023</time>
+        <div><h3>Fondateur &amp; Gérant</h3><p class="org">TECHXPERT</p><p class="d">Direction de l'entreprise et prestations informatiques : développement d'applications, conseil IT, formation.</p></div>
+      </li>
+      <li>
+        <time>2021 → 2025</time>
+        <div><h3>Responsable Parc Informatique &amp; Pédagogique</h3><p class="org">Lycée SUNBEAM, Ampitatafika</p><p class="d">Infrastructure IT, coordination pédagogique, enseignement de l'informatique et conception de l'application interne Gestion Étudiant.</p></div>
+      </li>
+      <li>
+        <time>2020 → 2021</time>
+        <div><h3>Gérant &amp; Superviseur IT</h3><p class="org">Hôtel Grand Palais · Salem Hôtel</p><p class="d">Supervision et maintenance des systèmes informatiques, gestion opérationnelle des deux établissements.</p></div>
+      </li>
+    </ul>
+  </section>
+
+  <section id="competences">
+    <div class="sec-head">
+      <h2>Compétences</h2>
+      <p>Une pile web complète, des bases de données au réseau, et une pratique de la formation pour chaque niveau.</p>
+    </div>
+    <div class="skills">
+      <div class="skill"><h3>Développement</h3><ul><li>PHP · Symfony 7</li><li>ReactJS · JavaScript · jQuery</li><li>Python</li><li>HTML5 · CSS3 responsive</li><li>API REST</li><li>Java · C/C++ · VB.Net</li></ul></div>
+      <div class="skill"><h3>Données</h3><ul><li>MySQL avancé · SQL Server</li><li>MS Access</li><li>Modélisation Merise et UML</li><li>Power BI · Microsoft Fabric</li><li>Python Pandas</li></ul></div>
+      <div class="skill"><h3>Infrastructure</h3><ul><li>Gestion de parc informatique</li><li>Réseaux LAN et Internet</li><li>Windows · Linux</li><li>AWS RDS</li><li>Maintenance matérielle et logicielle</li></ul></div>
+      <div class="skill"><h3>Formation</h3><ul><li>Ingénierie de formation</li><li>Bureautique (Word, Excel, Teams)</li><li>Évaluation des acquis</li><li>Intel Educator 4.0</li><li>Montage vidéo et retouche photo</li></ul></div>
+      <div class="skill"><h3>IA</h3><ul><li>Prompt engineering</li><li>Machine learning</li><li>IA générative</li><li>Automatisation par IA</li><li>Génération de quiz par IA, OCR</li></ul></div>
+    </div>
+  </section>
+
+  <section id="formation">
+    <div class="sec-head">
+      <h2>Formation et certifications</h2>
+      <p>Des diplômes universitaires, puis une formation continue sur de nombreuses plateformes.</p>
+    </div>
+    <div class="two">
+      <div>
+        <h3>Diplômes</h3>
+        <ul class="deg">
+          <li><b>2022</b><div>Autorisation d'Enseigner<span>Ministère de l'Éducation Nationale</span></div></li>
+          <li><b>2020</b><div>Licence Professionnelle en Informatique<span>EMIT, Université de Fianarantsoa</span></div></li>
+          <li><b>2016</b><div>Diplôme en Développement d'Applications et Système d'Information</div></li>
+          <li><b>2010</b><div>Baccalauréat Scientifique, série C<span>CSFX Fianarantsoa</span></div></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Certifications, 2025 – 2026</h3>
+        <ul class="plat">
+		  <li><svg class="cert-icon" viewBox="0 0 24 24"><path d="M12 2l3 6 6.5 1-4.7 4.6 1.1 6.4L12 17l-5.9 3 1.1-6.4L2.5 9 9 8l3-6z"/></svg>Microsoft Learn</li>
+		  <li><svg class="cert-icon" viewBox="0 0 24 24"><path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10 10-4.5 10-10S17.5 2 12 2zm-2 15l-5-5 1.4-1.4L10 14.2l7.6-7.6L19 8l-9 9z"/></svg>Intel Educator 4.0</li>
+		  <li><svg class="cert-icon" viewBox="0 0 24 24"><path d="M12 2l3 6 6.5 1-4.7 4.6 1.1 6.4L12 17l-5.9 3 1.1-6.4L2.5 9 9 8l3-6z"/></svg>CodeSignal</li>
+		  <li><svg class="cert-icon" viewBox="0 0 24 24"><path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10 10-4.5 10-10S17.5 2 12 2zm-2 15l-5-5 1.4-1.4L10 14.2l7.6-7.6L19 8l-9 9z"/></svg>Simplilearn</li>
+		  <li><svg class="cert-icon" viewBox="0 0 24 24"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm0 18a8 8 0 1 1 0-16 8 8 0 0 1 0 16zM9 8l-3 4 3 4h2l-3-4 3-4H9zm6 0h-2l3 4-3 4h2l3-4-3-4z"/></svg>SymfonyCasts</li>
+		  <li><svg class="cert-icon" viewBox="0 0 24 24"><path d="M12 2l3 6 6.5 1-4.7 4.6 1.1 6.4L12 17l-5.9 3 1.1-6.4L2.5 9 9 8l3-6z"/></svg>UniAthena</li>
+		  <li><svg class="cert-icon" viewBox="0 0 24 24"><path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10 10-4.5 10-10S17.5 2 12 2zm-2 15l-5-5 1.4-1.4L10 14.2l7.6-7.6L19 8l-9 9z"/></svg>HP LIFE</li>
+		  <li><svg class="cert-icon" viewBox="0 0 24 24"><path d="M12 2l3 6 6.5 1-4.7 4.6 1.1 6.4L12 17l-5.9 3 1.1-6.4L2.5 9 9 8l3-6z"/></svg>HackerRank</li>
+		  <li><svg class="cert-icon" viewBox="0 0 24 24"><path d="M12 2l3 6 6.5 1-4.7 4.6 1.1 6.4L12 17l-5.9 3 1.1-6.4L2.5 9 9 8l3-6z"/></svg>AWS</li>
+		  <li><svg class="cert-icon" viewBox="0 0 24 24"><path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10 10-4.5 10-10S17.5 2 12 2zm-2 15l-5-5 1.4-1.4L10 14.2l7.6-7.6L19 8l-9 9z"/></svg>Cisco Academy</li>
+		  <li><svg class="cert-icon" viewBox="0 0 24 24"><path d="M12 2l3 6 6.5 1-4.7 4.6 1.1 6.4L12 17l-5.9 3 1.1-6.4L2.5 9 9 8l3-6z"/></svg>Saylor Academy</li>
+		  <li><svg class="cert-icon" viewBox="0 0 24 24"><path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10 10-4.5 10-10S17.5 2 12 2zm-2 15l-5-5 1.4-1.4L10 14.2l7.6-7.6L19 8l-9 9z"/></svg>Cursa</li>
+		  <li><svg class="cert-icon" viewBox="0 0 24 24"><path d="M12 2l3 6 6.5 1-4.7 4.6 1.1 6.4L12 17l-5.9 3 1.1-6.4L2.5 9 9 8l3-6z"/></svg>FutureLearn</li>
+		  <li><svg class="cert-icon" viewBox="0 0 24 24"><path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10 10-4.5 10-10S17.5 2 12 2zm-2 15l-5-5 1.4-1.4L10 14.2l7.6-7.6L19 8l-9 9z"/></svg>MindLuster</li>
+		  <li><svg class="cert-icon" viewBox="0 0 24 24"><path d="M12 2l3 6 6.5 1-4.7 4.6 1.1 6.4L12 17l-5.9 3 1.1-6.4L2.5 9 9 8l3-6z"/></svg>AIIXX</li>
+		  <li><svg class="cert-icon" viewBox="0 0 24 24"><path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10 10-4.5 10-10S17.5 2 12 2zm-2 15l-5-5 1.4-1.4L10 14.2l7.6-7.6L19 8l-9 9z"/></svg>Educourse</li>
+		</ul>
+        <p class="note">Symfony, front-end, SQL avancé, IA et prompt engineering, réseaux, Power BI, leadership pédagogique. Les certificats sont disponibles sur demande.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="contact">
+      <p class="big">Un système à construire, une équipe à former ?</p>
+      <ul class="lines">
+        <li><span class="k">E-mail</span><span class="v" id="v-mail">herizo.andriantsoa@gmail.com</span><button class="copy" type="button" data-target="v-mail">Copier</button></li>
+        <li><span class="k">Téléphone</span><span class="v" id="v-tel">034 74 031 41</span><button class="copy" type="button" data-target="v-tel">Copier</button></li>
+        <li><span class="k">LinkedIn</span><a class="v" href="https://www.linkedin.com/in/herizo-andriantsoa-595582219" target="_blank" rel="noopener">herizo-andriantsoa-595582219</a><span></span></li>
+        <li><span class="k">Adresse</span><span class="v">Lot H86 bis Amorondria, Sabotsy Namehana, Antananarivo 103</span><span></span></li>
+      </ul>
+    </div>
+  </section>
+
+  <footer>
+    <span>Herizo Aimé Andriantsoa</span>
+    <span>TECHXPERT · Antananarivo</span>
+  </footer>
+</main>
+
+<script>
+document.querySelectorAll('.copy').forEach(function(btn){
+  btn.addEventListener('click',function(){
+    var el=document.getElementById(btn.dataset.target);
+    var text=el.textContent.trim();
+    function done(){btn.textContent='Copié';setTimeout(function(){btn.textContent='Copier'},1600)}
+    function fallback(){
+      var r=document.createRange();r.selectNodeContents(el);
+      var s=window.getSelection();s.removeAllRanges();s.addRange(r);
+    }
+    try{
+      navigator.clipboard.writeText(text).then(done,fallback);
+    }catch(e){fallback()}
+  });
+});
+</script>
+
+</body></html>
